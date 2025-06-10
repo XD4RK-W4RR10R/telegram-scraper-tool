@@ -1,94 +1,55 @@
-# Telegram Scraper Tool
+# Telegram Scraper Tool 🚀
 
-🚀 A fully automated tool to scrape Telegram members and add/invite them to groups or channels using multiple accounts.
-
-### Features
+A fast & automated Telegram tool to:
 - ✅ Scrape members from public/private groups
-- ✅ Add scraped users to your group
-- ✅ Invite scraped users to channels
-- ✅ Multi-session support
-- ✅ Random delay & flood control
+- ✅ Add them to your group
+- ✅ Invite them to your channel
+- ✅ Use multiple accounts with delay & flood control
 
-### Usage
+---
+
+## 📦 Features
+- Scrape users from any public/private group
+- Add scraped users to any group (public/private)
+- Invite scraped users to any channel (public/private)
+- Multi-account support (sessions)
+- Random delay to avoid flood limits
+
+---
+
+## 🛠 Installation (Termux / Linux)
 
 ```bash
-python3 scraper.py
-python3 adder.py
-python3 invite.py
-
-✅ Termux / Linux-এ তোমার টুল ইনস্টল ও চালানোর পুরো প্রক্রিয়া
-🔧 STEP 1: প্রাথমিক Setup (Termux/Linux)
-bash
-Copy
-Edit
 pkg update && pkg upgrade -y
 pkg install git python -y
-❗ Termux এ প্রথমবার Python ইনস্টল না থাকলে এটা করতেই হবে।
-
-🔧 STEP 2: তোমার টুল ক্লোন করো GitHub থেকে
-bash
-Copy
-Edit
-git clone https://github.com/XD4RK-W4RR10R/telegram-scraper-tool.git
-cd telegram-scraper-tool
-🔧 STEP 3: Python dependency ইনস্টল করো
-bash
-Copy
-Edit
-pip install --upgrade pip
+git clone https://github.com/YOUR_USERNAME/telegram-scraper.git
+cd telegram-scraper
 pip install -r requirements.txt
-🧠 যদি কখনো pip error দেয়, এই কমান্ড চালাও:
 
-bash
-Copy
-Edit
-python -m ensurepip --upgrade
-🔧 STEP 4: config.py ফাইল এডিট করো
-bash
-Copy
-Edit
-nano config.py
-এখানে নিচের মতো করে তোমার info বসাও:
+⚙️ Configuration
+Edit config.py and set your credentials:
 
-python
-Copy
-Edit
-API_ID = 1234567  # তোমার Telegram API ID
-API_HASH = 'your_api_hash'  # তোমার API Hash
-GROUP = 'https://t.me/targetgroup'  # Target group link (scraping)
-CHANNEL = 'https://t.me/yourchannel'  # Channel invite এর জন্য
-SESSION_FOLDER = 'sessions'  # session dir
-save করতে: CTRL + X ➤ Y ➤ ENTER
+API_ID = 1234567
+API_HASH = 'your_api_hash'
+SOURCE = 'https://t.me/sourcegroup'        # Group/channel to scrape from
+TARGET_GROUP = 'https://t.me/yourgroup'     # Group to add members
+CHANNEL = 'https://t.me/yourchannel'        # Channel to invite members
+SESSION_FOLDER = 'sessions'
+Save with CTRL + X ➤ Y ➤ ENTER
 
-🔧 STEP 5: Session ফাইল তৈরি করো (login)
-bash
-Copy
-Edit
-python scraper.py
-প্রথমবার চালালে Telegram login চাবে (phone number, code etc) – সেগুলো দাও।
+🚀 Usage:
 
-🔧 STEP 6: Scrape → Add → Invite Commands
-bash
-Copy
-Edit
-# Group থেকে Member Scrape
+# 1. Login & scrape members
 python scraper.py
 
-# Scraped User দের Group এ Add করা
+# 2. Add users to group
 python adder.py
 
-# Scraped User দের Channel এ Auto Invite করা
+# 3. Invite users to channel
 python invite.py
-✅ Success! এখন তুমি তোমার Tools কে পুরোপুরি চালাতে পারো Termux বা Linux এ 💻
-⚠️ যদি No module named telethon বা অন্য error আসে:
-bash
-Copy
-Edit
-pip install telethon pandas
-🔁 Extra (Multiple Sessions)
-একাধিক account ব্যবহার করতে চাইলে sessions/ ফোল্ডারে নতুন সেশন ফাইল বানাও, যেমন:
+✅ All scraped users are saved in data/members.csv
+✅ Successful & failed additions logged in added.txt and failed.txt
 
-bash
-Copy
-Edit
-cp sessions/your.session sessions/your2.session
+⚠️ Disclaimer
+This tool is for educational purposes only.
+Do not use for spam or violate Telegram's Terms of Service.
