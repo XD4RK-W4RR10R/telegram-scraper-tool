@@ -1,14 +1,17 @@
-# Telegram Member Scraper & Adder Tool
+# Telegram Scraper Tool
 
-## প্রয়োজনীয়তা
-- Python 3.8+
-- Telethon লাইব্রেরি (1.34.0)
-- pandas লাইব্রেরি
+🚀 A fully automated tool to scrape Telegram members and add/invite them to groups or channels using multiple accounts.
 
-## কনফিগারেশন
-`config.py` ফাইলে তোমার API ID, HASH, এবং টার্গেট গ্রুপ/চ্যানেল লিংক সেট করো।
+### Features
+- ✅ Scrape members from public/private groups
+- ✅ Add scraped users to your group
+- ✅ Invite scraped users to channels
+- ✅ Multi-session support
+- ✅ Random delay & flood control
 
-## রান করার নিয়ম
-- মেম্বার স্ক্র্যাপ করতে:
+### Usage
+
 ```bash
-python scraper.py
+python3 scraper.py
+python3 adder.py
+python3 invite.py
