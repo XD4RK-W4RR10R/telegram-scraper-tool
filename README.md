@@ -22,8 +22,8 @@ A fast & automated Telegram tool to:
 ```bash
 pkg update && pkg upgrade -y
 pkg install git python -y
-git clone https://github.com/YOUR_USERNAME/telegram-scraper.git
-cd telegram-scraper
+git clone https://github.com/XD4RK-W4RR10R/telegram-scraper-tool.git
+cd telegram-scraper-tool
 pip install -r requirements.txt
 
 ⚙️ Configuration
@@ -35,6 +35,7 @@ SOURCE = 'https://t.me/sourcegroup'        # Group/channel to scrape from
 TARGET_GROUP = 'https://t.me/yourgroup'     # Group to add members
 CHANNEL = 'https://t.me/yourchannel'        # Channel to invite members
 SESSION_FOLDER = 'sessions'
+
 Save with CTRL + X ➤ Y ➤ ENTER
 
 🚀 Usage:
